@@ -1,8 +1,8 @@
 
 <template>
-  <div>
+  <div class="w-100">
 
-    <v-stepper v-model="step" alt-labels class="bgdarkopacity">
+    <v-stepper v-model="step" alt-labels class="stepper w-100">
 
       <!--  -->
       <v-stepper-step
@@ -273,15 +273,20 @@ export default {
 
 </script>
 <style scoped>
+
+  .w-100 {
+    width:100%;
+  }
   div.g-recaptcha {
     margin: 0 auto 20px auto;
     width: 304px;
   }
-  .bgdarkopacity {
-    background: rgba(48,48,48,0.9) !important;
-    width: 700px;
+  .stepper {
     display: block;
-    margin: 0 auto;
+    background: white;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05) !important;
+    border-radius:8px;
+    width:100%;
   }
   .txtdts {
     text-align: center;
@@ -318,9 +323,7 @@ export default {
     align-items: flex-start;
   }
   @media only screen and (max-width: 992px) {
-    .bgdarkopacity {
-      width: 85%;
-    }
+
     .txtdts h1 {
       font-size: 42px;
     }
@@ -331,10 +334,7 @@ export default {
     }
   }
   @media only screen and (max-width: 576px) {
-    .bgdarkopacity {
-      width: 100%;
-      min-width: auto;
-    }
+
     .txtdts h1 {
       font-size: 32px;
     }

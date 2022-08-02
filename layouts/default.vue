@@ -1,11 +1,12 @@
 <template>
-  <v-app class="vappbackground">
-    <v-header id="header">
-      <div class="flex_contheader">
+  <v-app class="bg-secondary">
+    <v-container class="mt-4">
+      <v-row>
+        <div id="header" class="d-flex justify-space-between align-center col-11 col-lg-12 w-100 mx-auto">
         <div class="statusheaderleft">
-          <img class="mainimglogo" src="../assets/img/cheqd-Logo-White.png" alt="logo"/>
+          <img class="mainimglogo" src="../assets/img/humans-logo.svg" alt="logo"/>
         </div>
-        <h1 class="testnetheader">Testnet Faucet</h1>
+        <h2 class="testnetheader">TESTNET FAUCET</h2>
         <div class="statusheader">
           <div class="desktopstatusdiv">
             <v-select
@@ -113,11 +114,18 @@
           <!--  -->
         </div>
       </div>
-    </v-header>
-    <v-main>
-      <v-container class="maincontainer">
+      </v-row>
+
+    </v-container>
+    <v-main class="container mt-12 mb-12">
+      <div class="row">
+        <div class="d-flex justify-center align-center col-11 col-lg-12 w-100 mx-auto">
+
         <Nuxt />
-      </v-container>
+
+        </div>
+      </div>
+
     </v-main>
     <v-footer
       class="pagefooter"
@@ -186,12 +194,8 @@ export default {
 }
 </script>
 <style scoped>
-  .vappbackground {
-    background: url('../assets/img/Orange_Mobius_06.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    font-family: 'Nunito', sans-serif;
+  .bg-secondary {
+    background: #f8f8f8;
   }
   .maincontainer {
     display: flex;
@@ -214,12 +218,13 @@ export default {
   #header {
     /* position: sticky;
     top:0; */
-    width: 100%;
     display: block;
-    background: rgba(48,48,48,0.8);
-    padding:20px 0 10px 0;
+    background: white;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05);
     z-index: 100;
+    border-radius:8px;
   }
+
   .flex_contheader {
     display: flex;
     align-items: center;
