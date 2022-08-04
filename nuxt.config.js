@@ -6,8 +6,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: 'cheqd Testnet Faucet',
-    title: 'cheqd Testnet Faucet',
+    titleTemplate: 'Humans Testnet Faucet',
+    title: 'Humans Testnet Faucet',
     htmlAttrs: {
       lang: 'en'
     },
@@ -18,7 +18,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/h-Logo.svg' }
     ]
   },
 
@@ -71,7 +71,8 @@ export default {
       }
     }
   },
-
+  treeShake: true,
+  defaultAssets: false,
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
