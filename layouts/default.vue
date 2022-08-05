@@ -365,4 +365,15 @@ export default {
       display: block;
     }
   }
+footer.row {
+  background-color: '#E5E6E6' !important;
+}
+.theme--light.v-sheet {
+  background-color: '#E5E6E6' !important;
+}
+
+.theme--light.v-application {
+  background-color: '#E5E6E6' !important;
+}
+
 </style>
