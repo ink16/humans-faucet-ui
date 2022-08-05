@@ -68,11 +68,6 @@ export default {
       }
     },
     //treeShake: true,
-    defaultAssets: {
-      font: {
-        family: 'Alliance'
-      }
-    }
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
