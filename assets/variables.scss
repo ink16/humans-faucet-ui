@@ -2,12 +2,13 @@
 //
 // The variables you want to modify
 // $font-size-root: 20px;
-
 @font-face {
-  font-family: "Alliance";
-  src: url('~assets/fonts/AllianceNo1-Regular.ttf') format("truetype");
+  font-family: 'Alliance';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('assets/fonts/AllianceNo1-Regular.woff2') format('woff2');
 }
-
-$body-font-family: url('~assets/fonts/AllianceNo1-Regular.ttf');
-
+$body-font-family: 'Alliance';
+$font-size-root: 18px;
 @import '~vuetify/src/styles/styles.sass';
