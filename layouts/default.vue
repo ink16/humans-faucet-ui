@@ -117,21 +117,21 @@
       </v-row>
 
     </v-container>
-    <v-main class="container mt-12 mb-12">
-      <div class="row">
-        <div class="d-flex justify-center align-center col-11 col-lg-12 w-100 mx-auto">
+    <v-container class="mt-12 mb-12">
+      <v-row>
+        <div class="d-flex justify-center align-center col-11 col-lg-12 w-100 mx-auto px-0">
 
         <Nuxt />
 
         </div>
-      </div>
+      </v-row>
 
-    </v-main>
-    <v-footer
-      class="container mt-12 mb-4"
+    </v-container>
+    <v-container
+      class="mt-12 mb-4"
       relative
     >
-    <div class="row">
+    <v-row>
       <div id="footer" class="d-flex flex-column justify-center align-center col-11 col-lg-12 w-100 mx-auto">
       <div class="social-links">
         <a href="https://t.me/cheqd" class="social-links__icon" target="_blank"><span class="social-links__icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" aria-labelledby="telegram1" role="img"><title id="telegram1">Follow us on Instagram</title><g id="telegram1_layer"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"></path></g></svg></span></a>
@@ -144,8 +144,8 @@
       </div>
 
       </div>
-      </div>
-    </v-footer>
+      </v-row>
+    </v-container>
   </v-app>
 </template>
 
