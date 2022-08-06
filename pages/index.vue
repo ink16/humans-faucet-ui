@@ -18,7 +18,7 @@
         :step="1"
       >
         <div class="txtdts text-center">
-          <p>If you are a developer looking to test the functionality of cheqd network or setting up a node on testnet, setting up a node on the cheqd test network, you can acquire <b>test</b> CHEQ tokens through this faucet.</p>
+          <p>If you are a developer looking to test the functionality of humans network or setting up a node on testnet, setting up a node on the humans test network, you can acquire <b>test</b> $HEART tokens through this faucet.</p>
         </div>
         <v-btn
           @click="step++"
@@ -37,7 +37,7 @@
         :complete="step > 2"
         editable
       >
-        Add your cheqd <b>testnet</b> Address
+        Add your humans <b>testnet</b> Address
         <v-tooltip
         top
         close-delay="2000"
@@ -51,7 +51,7 @@
               mdi-information-outline
             </v-icon>
           </template>
-          <span>Please enter your cheqd testnet wallet address which we'll use to transfer your test tokens.<br> To show the wallet address, follow the <a class="font-weight-bold" href="https://github.com/cheqd/cheqd-node/blob/main/docs/cheqd-cli/cheqd-cli-accounts.md" target="_blank">cheqd CLI guide on managing accounts (cheqd-noded keys list).</a><br> It should begin with "cheqd1".</span>
+          <span>Please enter your humans testnet wallet address which we'll use to transfer your test tokens.<br> To show the wallet address, follow the <a class="font-weight-bold" href="https://github.com/humansdotai/humans-node/blob/main/docs/humans-cli/humans-cli-accounts.md" target="_blank">humans CLI guide on managing accounts (humans-noded keys list).</a><br> It should begin with "humans1".</span>
         </v-tooltip>
       </v-stepper-step>
 
@@ -72,7 +72,7 @@
           >
             <v-text-field
               v-model="address"
-              label="cheqd wallet Address"
+              label="humans wallet Address"
               :hint="`Example: ${DEFAULT_TESTING_ADDRESS}`"
               required
               class="col-12"
@@ -145,7 +145,7 @@
       class="mt-3"
       outlined
     >
-      <b>Done! Your requests tokens should have arrived at your provided address ({{ CHEQD_CURRENT_AMOUNT_GIVEN }} {{ CHEQD_MINIMAL_DENOM }}).</b>
+      <b>Done! Your requests tokens should have arrived at your provided address ({{ humans_CURRENT_AMOUNT_GIVEN }} {{ humans_MINIMAL_DENOM }}).</b>
     </v-alert>
     <v-alert
       icon="mdi-shield-lock-outline"
@@ -191,7 +191,7 @@
 
 <script>
 
-import { CHEQD_FAUCET_SERVER, CHEQD_MINIMAL_DENOM, CHEQD_CURRENT_AMOUNT_GIVEN, DEFAULT_TESTING_ADDRESS } from '../constants/constants'
+import { humans_FAUCET_SERVER, humans_MINIMAL_DENOM, humans_CURRENT_AMOUNT_GIVEN, DEFAULT_TESTING_ADDRESS } from '../constants/constants'
 
 export default {
   data: () => {
@@ -206,10 +206,10 @@ export default {
       error_recaptcha: false,
       address_rules: [
         value => !!value||`Required.\n Example: ${DEFAULT_TESTING_ADDRESS}`,
-        value => /^(cheqd)1[a-z0-9]{38}$/.test(value)||'Invalid cheqd address format.'
+        value => /^(humans)1[a-z0-9]{38}$/.test(value)||'Invalid humans address format.'
       ],
-      CHEQD_MINIMAL_DENOM,
-      CHEQD_CURRENT_AMOUNT_GIVEN,
+      humans_MINIMAL_DENOM,
+      humans_CURRENT_AMOUNT_GIVEN,
       DEFAULT_TESTING_ADDRESS
     }
   },
@@ -257,9 +257,9 @@ export default {
     async handle_fetch () {
       try {
         const response = await this.$axios.post(
-          `${CHEQD_FAUCET_SERVER}/credit`,
+          `${humans_FAUCET_SERVER}/credit`,
           {
-            denom: CHEQD_MINIMAL_DENOM,
+            denom: humans_MINIMAL_DENOM,
             address: this.address || DEFAULT_TESTING_ADDRESS
           }
         )
