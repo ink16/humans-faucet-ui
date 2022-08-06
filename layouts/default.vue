@@ -128,7 +128,7 @@
 
     </v-container>
     <v-container
-      class="mt-12 mb-4"
+      class="mt-auto mb-4"
       relative
     >
     <v-row>
