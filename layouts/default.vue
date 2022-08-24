@@ -157,11 +157,11 @@ export default {
   data () {
     return {
       fixed: false,
-      title: 'cheqd Testnet faucet',
+      title: 'humans Testnet faucet',
       faucet_status: '',
       faucet_status_color: 'green',
-      items: ['cheqd-testnet-4'],
-      selected: 'cheqd-testnet-4',
+      items: ['test'],
+      selected: 'test',
       dialog: false
     }
   },
