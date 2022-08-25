@@ -6,7 +6,7 @@
         <div class="statusheaderleft">
           <img class="mainimglogo" src="../assets/img/humans-logo.svg" alt="logo"/>
         </div>
-        <h2 class="devnetheader">DEVNET</h2>
+        <!--<h2 class="devnetheader">DEVNET</h2> -->
         <div class="statusheader">
           <div class="desktopstatusdiv">
             <v-select

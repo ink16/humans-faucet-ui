@@ -249,10 +249,17 @@ export default {
 </script>
 <style scoped>
 
+.v-stepper {
+  border-radius: 8px;
+  box-shadow: 0px 10px 15px rgb(0 0 0 / 10%), 0px 4px 6px rgb(0 0 0 / 5%) !important;
+}
+
 .v-stepper__content{
   min-height: 300px;
   padding-top:100px;
 }
+
+
   .w-100 {
     width:100%;
   }
