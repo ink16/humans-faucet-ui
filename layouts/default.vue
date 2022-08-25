@@ -6,7 +6,7 @@
         <div class="statusheaderleft">
           <img class="mainimglogo" src="../assets/img/humans-logo.svg" alt="logo"/>
         </div>
-        <h2 class="devnetheader">DEVNET FAUCET</h2>
+        <h2 class="devnetheader">DEVNET</h2>
         <div class="statusheader">
           <div class="desktopstatusdiv">
             <v-select
@@ -206,8 +206,10 @@ export default {
     width:100%;
   }
   .bg-secondary {
-    background: #f8f8f8;
+    background-image: url('../assets/img/background-faucet.png') no-repeat center center fixed !important;
+  background-size: cover;
   }
+
   .maincontainer {
     display: flex;
     flex-direction: column;
@@ -255,7 +257,7 @@ export default {
     width: 250px;
   }
   .mainimglogo {
-    width:150px;
+    width:320px;
     display: block;
     padding-left: 15px;
   }
@@ -368,7 +370,8 @@ footer.row {
 }
 
 .theme--light.v-application {
-  background-color: '#E5E6E6' !important;
+  background: url('../assets/img/background-faucet.png') no-repeat center center fixed !important;
+  background-size: cover;
 }
 
 </style>
