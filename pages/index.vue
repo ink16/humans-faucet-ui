@@ -2,17 +2,36 @@
 <template>
   <div class="w-100">
 
-    <v-stepper v-model="step" alt-labels class="stepper w-100">
-
-      <!--  -->
+    <v-stepper  non-linear v-model="step" class="align-middle">
+    <v-stepper-header>
       <v-stepper-step
-        class="stepiconfont"
-        step="1"
-        :complete="step > 1"
+        :complete="e1 > 1"
         editable
+        step="1"
       >
         Instructions
       </v-stepper-step>
+
+      <v-divider></v-divider>
+
+      <v-stepper-step
+      editable
+        :complete="e1 > 2"
+        step="2"
+      >
+        Provide receiving <b>address</b>
+      </v-stepper-step>
+
+      <v-divider></v-divider>
+
+      <v-stepper-step editable step="3">
+        Proof of <b>human</b> challenge
+      </v-stepper-step>
+    </v-stepper-header>
+      <!--  -->
+          <v-stepper-items>
+
+
 
       <v-stepper-content
         :step="1"
@@ -31,29 +50,6 @@
 
       <!--  -->
 
-      <v-stepper-step
-        class="stepiconfont"
-        step="2"
-        :complete="step > 2"
-        editable
-      >
-        Add your humans <b>testnet</b> Address
-        <v-tooltip
-        top
-        close-delay="2000"
-        >
-          <template v-slot:activator="{ on, attrs }">
-            <v-icon
-              v-bind="attrs"
-              v-on="on"
-              small
-              >
-              mdi-information-outline
-            </v-icon>
-          </template>
-          <span>Please enter your Humans testnet wallet address which we'll use to transfer your test tokens.<br> To show the wallet address, follow the <a class="font-weight-bold" href="https://github.com/cheqd/cheqd-node/blob/main/docs/cheqd-cli/cheqd-cli-accounts.md" target="_blank">cheqd CLI guide on managing accounts (cheqd-noded keys list).</a><br> It should begin with "cheqd1".</span>
-        </v-tooltip>
-      </v-stepper-step>
 
       <v-stepper-content
         :step="2"
@@ -93,28 +89,6 @@
 
       <v-divider></v-divider>
 
-      <v-stepper-step
-        step="3"
-        :complete="step > 3"
-        class="stepiconfont"
-      >
-        Verification Challenge
-        <v-tooltip
-        top
-        close-delay="2000"
-        >
-          <template v-slot:activator="{ on, attrs }">
-            <v-icon
-              v-bind="attrs"
-              v-on="on"
-              small
-              >
-              mdi-information-outline
-            </v-icon>
-          </template>
-          <span>Complete the reCaptcha.<br> Once you have completed this we'll send you a notification with confirmation your tokens have been sent.</span>
-        </v-tooltip>
-      </v-stepper-step>
 
       <v-stepper-content
         :step="3"
@@ -133,6 +107,7 @@
           </v-btn>
         </v-form>
       </v-stepper-content>
+      </v-stepper-items>
     </v-stepper>
     <v-alert
       icon="mdi-shield-lock-outline"
@@ -274,6 +249,10 @@ export default {
 </script>
 <style scoped>
 
+.v-stepper__content{
+  min-height: 300px;
+  padding-top:100px;
+}
   .w-100 {
     width:100%;
   }
@@ -281,13 +260,7 @@ export default {
     margin: 0 auto 20px auto;
     width: 304px;
   }
-  .stepper {
-    display: block;
-    background: white;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05) !important;
-    border-radius:8px;
-    width:100%;
-  }
+
   .txtdts {
     text-align: center;
   }
