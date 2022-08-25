@@ -37,7 +37,7 @@
         :step="1"
       >
         <div class="txtdts text-center">
-          <p>You can acquire <b>test</b> HEART tokens through this faucet.</p>
+          <p>You can acquire <b>devnet</b> HEART tokens through this faucet.</p>
         </div>
         <v-btn
           @click="step++"
@@ -140,13 +140,13 @@
       prominent
       dismissible
       text
-      type="warning"
+      type="error"
       v-model="error_non_existing_address"
       transition="scale-transition"
       class="mt-3"
       outlined
     >
-      <b>Faucet is busy or you might reached the 100 Hearth per account limit, please try again later!</b>
+      <b>Faucet is busy or you might have reached the 100 Heart per account limit. Please try again later!</b>
     </v-alert>
     <v-alert
       icon="mdi-shield-lock-outline"

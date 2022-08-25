@@ -6,8 +6,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: 'Humans Testnet Faucet',
-    title: 'Humans Testnet Faucet',
+    titleTemplate: 'Humans Devnet Faucet',
+    title: 'Humans Devnet Faucet',
     htmlAttrs: {
       lang: 'en'
     },

@@ -1,4 +1,4 @@
-# cheqd Testnet Faucet UI
+# Humans.ai Devnet Faucet
 
 ## Build Setup
 

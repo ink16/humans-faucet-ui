@@ -6,7 +6,7 @@
         <div class="statusheaderleft">
           <img class="mainimglogo" src="../assets/img/humans-logo.svg" alt="logo"/>
         </div>
-        <h2 class="testnetheader">TESTNET FAUCET</h2>
+        <h2 class="devnetheader">DEVNET FAUCET</h2>
         <div class="statusheader">
           <div class="desktopstatusdiv">
             <v-select
@@ -157,11 +157,11 @@ export default {
   data () {
     return {
       fixed: false,
-      title: 'humans Testnet faucet',
+      title: 'humans Devnet faucet',
       faucet_status: '',
       faucet_status_color: 'green',
-      items: ['test'],
-      selected: 'test',
+      items: ['devnet'],
+      selected: 'devnet',
       dialog: false
     }
   },
@@ -325,7 +325,7 @@ export default {
       width: 100px;
       margin: 0 auto;
     }
-    .testnetheader {
+    .devnetheader {
       font-size: 30px;
     }
     .mobilestatusdiv {
@@ -341,7 +341,7 @@ export default {
       width: 80px;
       margin: 0;
     }
-    .testnetheader {
+    .devnetheader {
       font-size: 24px;
     }
     .bgdarkopacity {
