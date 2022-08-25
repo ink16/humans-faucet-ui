@@ -165,13 +165,13 @@
       prominent
       dismissible
       text
-      type="info"
+      type="warning"
       v-model="error_non_existing_address"
       transition="scale-transition"
       class="mt-3"
       outlined
     >
-      <b>Address is not in the expected format for this chain or does not exist.</b>
+      <b>Faucet is busy, please try again later!</b>
     </v-alert>
     <v-alert
       icon="mdi-shield-lock-outline"
@@ -191,7 +191,7 @@
 
 <script>
 
-import { CHEQD_FAUCET_SERVER, CHEQD_MINIMAL_DENOM, CHEQD_CURRENT_AMOUNT_GIVEN, DEFAULT_TESTING_ADDRESS } from '../constants/constants'
+import { CHEQD_CURRENT_AMOUNT_GIVEN, CHEQD_FAUCET_SERVER, CHEQD_MINIMAL_DENOM, DEFAULT_TESTING_ADDRESS } from '../constants/constants'
 
 export default {
   data: () => {
@@ -242,16 +242,16 @@ export default {
       const status = await this.handle_fetch()
 
       this.loading = !this.loading
-
+      console.log("Status of error:",status)
       if(!status) return this.error_non_existing_address = true
 
-      //if(status.data === 'ok'){
+      if(status.data === 'ok'){
         this.success = true
         return this.handle_auto_dismiss('success')
-     // }
+      }
 
-      //this.error = true
-      //return this.handle_auto_dismiss('error')
+      this.error = true
+      return this.handle_auto_dismiss('error')
     },
 
     async handle_fetch () {
@@ -259,7 +259,7 @@ export default {
         const response = await this.$axios.post(
           `${CHEQD_FAUCET_SERVER}`, //removed '/credit'
           {
-            denom: CHEQD_MINIMAL_DENOM,
+            coins: [CHEQD_CURRENT_AMOUNT_GIVEN+CHEQD_MINIMAL_DENOM],
             address: this.address || DEFAULT_TESTING_ADDRESS
           }
         )

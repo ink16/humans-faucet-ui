@@ -173,9 +173,10 @@ export default {
     async handle_faucet_status () {
       try {
         const status = await this.$axios.get(
-          `${CHEQD_FAUCET_SERVER}/status`
+          `${CHEQD_FAUCET_SERVER}`
         )
-        if(status.data.status === 'ok') {
+        console.log("Faucet status is",status)
+        if(status.status === 200) {
           this.faucet_status_color = 'green'
           this.faucet_status = 'Operational'
           return
