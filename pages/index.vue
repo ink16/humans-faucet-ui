@@ -171,7 +171,7 @@
       class="mt-3"
       outlined
     >
-      <b>Faucet is busy, please try again later!</b>
+      <b>Faucet is busy or you might reached the 100 Hearth per account limit, please try again later!</b>
     </v-alert>
     <v-alert
       icon="mdi-shield-lock-outline"
