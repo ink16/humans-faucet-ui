@@ -205,10 +205,6 @@ export default {
 .w-100 {
     width:100%;
   }
-  .bg-secondary {
-    background-image: url('../assets/img/background-faucet.png') no-repeat center center fixed !important;
-  background-size: cover;
-  }
 
   .maincontainer {
     display: flex;
@@ -370,8 +366,10 @@ footer.row {
 }
 
 .theme--light.v-application {
-  background: url('../assets/img/background-faucet.png') no-repeat center center fixed !important;
-  background-size: cover;
+  background: url('../assets/img/background-faucet.png');
+   background-size: cover; /* or contain depending on what you want */
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 </style>
