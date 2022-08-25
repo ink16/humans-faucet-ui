@@ -68,7 +68,7 @@
           >
             <v-text-field
               v-model="address"
-              label="humans wallet Address"
+              label="humans wallet address"
               :hint="`Example: ${DEFAULT_TESTING_ADDRESS}`"
               required
               class="col-12"
