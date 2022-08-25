@@ -250,7 +250,7 @@ export default {
 <style scoped>
 
 .v-stepper {
-  border-radius: 8px;
+  border-radius: 8px !important;
   box-shadow: 0px 10px 15px rgb(0 0 0 / 10%), 0px 4px 6px rgb(0 0 0 / 5%) !important;
 }
 
