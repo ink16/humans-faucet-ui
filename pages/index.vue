@@ -220,27 +220,26 @@ export default {
       console.log("Status of error:",status)
       if(!status) return this.error_non_existing_address = true
 
-      if(status.data === 'ok'){
-        this.success = true
-        return this.handle_auto_dismiss('success')
+      if (status.status === 200) {
+        this.success = true;
+        return this.handle_auto_dismiss("success");
       }
 
       this.error = true
       return this.handle_auto_dismiss('error')
     },
 
-    async handle_fetch () {
+    async handle_fetch() {
+      console.log("address:", this.address);
       try {
-        const response = await this.$axios.post(
-          `${CHEQD_FAUCET_SERVER}`, //removed '/credit'
-          {
-            coins: [CHEQD_CURRENT_AMOUNT_GIVEN+CHEQD_MINIMAL_DENOM],
-            address: this.address || DEFAULT_TESTING_ADDRESS
-          }
-        )
-        return response
+        const response = await this.$axios.post(`${CHEQD_FAUCET_SERVER}`, {
+          coins: [CHEQD_CURRENT_AMOUNT_GIVEN + CHEQD_MINIMAL_DENOM],
+          //  denom: CHEQD_MINIMAL_DENOM,
+          address: this.address || DEFAULT_TESTING_ADDRESS,
+        });
+        return response;
       } catch (error) {
-        return false
+        return false;
       }
     }
   }
