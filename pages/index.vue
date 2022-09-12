@@ -37,7 +37,9 @@
         :step="1"
       >
         <div class="txtdts text-center">
-          <p>You can acquire <b>devnet</b> HEART tokens through this faucet.</p>
+          <p>You can acquire <b>devnet</b> $HEART tokens through this faucet.</p>
+          <p>You need a humans wallet address, which you can create on the <a href="https://devnet-explorer.humans.zone/devnet">Humans Explorer</a>.</p>
+          <p>After sending the $HEART tokens, you can check your account balance <a href="https://devnet-explorer.humans.zone/wallet/accounts">here</a>. Expand the little arrow and click on 'Detail'.</p>
         </div>
         <v-btn
           @click="step++"
