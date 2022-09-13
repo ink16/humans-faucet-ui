@@ -46,7 +46,8 @@ export default {
     ],
     [
       '@nuxtjs/recaptcha', {
-        siteKey: '6Lfvc08dAAAAAFYxguVoURPuBLzt6wXccJLmltI8',
+        //siteKey: '6Lfvc08dAAAAAFYxguVoURPuBLzt6wXccJLmltI8', humans key
+        siteKey: '6Ld5h_QhAAAAAJWXjrDttD5Qa6V1bWvcHaSCsQ6x', //vercel key
         version: 'v2'
       },
     ]
