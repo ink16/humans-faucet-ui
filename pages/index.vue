@@ -122,7 +122,7 @@
       class="mt-3"
       outlined
     >
-      <b>Done! Your requests tokens should have arrived at your provided address ({{ CHEQD_CURRENT_AMOUNT_GIVEN }} {{ CHEQD_MINIMAL_DENOM }}).</b>
+      <b>Done! {{ CHEQD_CURRENT_AMOUNT_GIVEN /1000000}} $HEART sent.</b>
     </v-alert>
     <v-alert
       icon="mdi-shield-lock-outline"
