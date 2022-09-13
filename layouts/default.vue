@@ -167,7 +167,7 @@
                   </g></svg></span
             ></a>
             <a
-              href="https://facebook.com/humansdotai"
+              href="https://www.facebook.com/humansdotai"
               class="social-links__icon mr-5"
               target="_blank"
               ><span class="social-links__icon"
