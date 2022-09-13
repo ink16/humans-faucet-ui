@@ -3,7 +3,7 @@
   <div class="w-100">
 
     <v-stepper  non-linear v-model="step" class="align-middle">
-    <v-stepper-header>
+    <v-stepper-header class="">
       <v-stepper-step
         :complete="e1 > 1"
         editable
@@ -19,13 +19,13 @@
         :complete="e1 > 2"
         step="2"
       >
-        Provide receiving <b>address</b>
+        <b>Address</b>
       </v-stepper-step>
 
       <v-divider></v-divider>
 
       <v-stepper-step editable step="3">
-        Proof of <b>human</b> challenge
+        <b>Proof</b>
       </v-stepper-step>
     </v-stepper-header>
       <!--  -->
@@ -56,13 +56,16 @@
       <v-stepper-content
         :step="2"
       >
+
         <v-form
           ref="form"
           v-model="valid"
         >
+
           <v-col
             cols="12"
           >
+          <p>Please provide a humans wallet address.</p>
           <v-card
             class="mb-12 col-auto"
             color="lighten-1"
@@ -95,6 +98,7 @@
       <v-stepper-content
         :step="3"
       >
+      <p>Please prove you are <b>human</b>.</p>
         <v-form
           @submit.prevent="handle_submit"
         >

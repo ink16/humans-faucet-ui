@@ -371,7 +371,7 @@ export default {
     height: 30px;
   }
   .mainimglogo {
-    width: 120px;
+    width: 240px;
     margin: 0 auto;
   }
   .statusheader {
@@ -390,7 +390,7 @@ export default {
 }
 @media only screen and (max-width: 756px) {
   .mainimglogo {
-    width: 100px;
+    width: 240px;
     margin: 0 auto;
   }
   .devnetheader {
@@ -406,7 +406,7 @@ export default {
     width: 60px;
   }
   .mainimglogo {
-    width: 80px;
+    width: 240px;
     margin: 0;
   }
   .devnetheader {
