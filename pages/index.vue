@@ -24,7 +24,7 @@
 
       <v-divider></v-divider>
 
-      <v-stepper-step editable step="3">
+      <v-stepper-step step="3">
         <b>Proof</b>
       </v-stepper-step>
     </v-stepper-header>
